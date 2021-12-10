@@ -9,7 +9,7 @@ class Human:
         self.__public_key = None
 
     def generate_secret_key(self, g, p):
-        self.__secret = diffiehellman.generate_secret(g, p)
+        self.__secret = diffiehellman.generate_secret(p)
 
     def generate_public_key(self, g, p):
         self.__public_key = diffiehellman.generate_public(self.__secret, g, p)
